@@ -9,7 +9,7 @@ spec:
         description: test       
   steps:
     - name: task-two-step-four
-      image: ubuntu
+      image: scratch
       env:
         - name: BUILD_NUMBER
           value: $(inputs.params.buildnumber)
