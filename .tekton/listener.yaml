@@ -75,7 +75,7 @@ spec:
           value: Hello from the Git Triggers EventListener!
 ---
 apiVersion: tekton.dev/v1alpha1
-kind: EventListener
+kind: EventListener11
 metadata:
   name: manual-lonely-listener
 spec:
