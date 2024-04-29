@@ -1,5 +1,5 @@
 apiVersion: tekton.dev/v1alpha1
-kind: TriggerTemplate
+kind: TriggerTemplate1
 metadata:
   name: pipeline-template
 spec:
@@ -39,7 +39,7 @@ spec:
           name: sample-pipeline
 ---
 apiVersion: tekton.dev/v1alpha1
-kind: TriggerBinding
+kind: TriggerBinding1
 metadata:
   name: pipeline-binding
 spec:
@@ -50,7 +50,7 @@ spec:
       value: $(event.repository.url)
 ---
 apiVersion: tekton.dev/v1alpha1
-kind: TriggerBinding
+kind: TriggerBinding1
 metadata:
   name: manual-pipeline-binding
 spec:
@@ -61,7 +61,7 @@ spec:
       value: https://github.com/GoogleContainerTools/skaffold
 ---
 apiVersion: tekton.dev/v1alpha1
-kind: EventListener
+kind: EventListener1
 metadata:
   name: lonely-listener
 spec:
