@@ -3,18 +3,12 @@ kind: Task
 metadata:
   name: task1
 spec:
-  params:
-    - name: secure-prop
   steps:
     - name: task-one-step-one
       image: ubuntu
-      env:
-        - name: SECURE_PROP
-          value: $(params.secure-prop)
       command: ["bash", "-c"]
       args:
         - echo 'Greenwell Site - Health Check';
-          echo 'SECURE_PROP: ${SECURE_PROP}';
           apt-get -qq update > /dev/null; apt-get -qq -y install curl > /dev/null;
           alive=$(curl https://greenwell-app.eu-de.mybluemix.net/health);
           if [ "$alive" == "200 - Healthy" ];
