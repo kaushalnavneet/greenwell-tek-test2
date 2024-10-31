@@ -7,6 +7,3 @@ spec:
     - name: task1
       taskRef:
         name: task1
-      params:
-        - name: secure-prop
-          value: $(params.secure-prop)
