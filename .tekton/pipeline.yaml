@@ -3,9 +3,6 @@ kind: Pipeline
 metadata:
   name: sample-pipeline
 spec:
-  params:
-    - name: secure-prop
-spec:
   tasks:
     - name: task1
       taskRef:
