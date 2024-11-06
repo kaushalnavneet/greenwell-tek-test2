@@ -37,9 +37,6 @@ spec:
       spec:
         pipelineRef:
           name: sample-pipeline
-        params:
-          - name: secure-prop
-            value: $(params.secure-prop)
 ---
 apiVersion: tekton.dev/v1beta1
 kind: TriggerBinding
@@ -51,8 +48,6 @@ spec:
       value: $(event.head_commit.id)
     - name: gitrepositoryurl
       value: $(event.repository.url)
-    - name: secure-prop
-      value: $(params.SECURE_PROP)
 ---
 apiVersion: tekton.dev/v1beta1
 kind: TriggerBinding
