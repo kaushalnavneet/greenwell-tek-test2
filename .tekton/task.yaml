@@ -151,7 +151,7 @@ metadata:
   name: postgres-test
 spec:
   params:
-    - name: pg_user   #This is from the pipeline definition
+    - name: pg_user   # This is from the pipeline definition
       description: Postgres User    
       default: admin
   steps:
